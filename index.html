@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graduation Invitation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<div id="rotate-warning">
+  <p>Please rotate your phone<br>to landscape</p>
+</div>
+
+<body>
+
+  <div class="container">
+    <img src="land.gif" alt="Game Scene" class="background">
+    <audio id="player" src="music-1.mp3" autoplay></audio>
+    <!-- <button id="tapToStart" style="margin-top: 20px;">Click for music</button> -->
+
+
+    <!-- Dialog box -->
+    <div class="dialog-box" id="dialog">
+      <div class="portrait-area">
+        <img src="Faceset.png" alt="Speaker" class="speaker-face">
+      </div>
+      <div class="dialog-content">
+        <p id="dialogText"></p>
+        <div class="buttons" id="buttons" style="display:none;">
+          <button id="yesBtn">Yes!</button>
+          <button id="noBtn">No...</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

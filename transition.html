@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading...</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #f8e6b3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    img {
+      width: 600px;
+      height: auto;
+      image-rendering: pixelated;
+    }
+
+    .background {
+      border: 6px solid #333;
+      width: 900px;
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+  <img src="Example 2.gif" alt="Transition Scene" class="background">
+  <audio id="player" src="music-2.mp3" autoplay></audio>
+
+  <script>
+
+  const frames = [
+  "Example 3.gif",
+  "Example 4.gif",
+  "Untitled design.gif"
+  ];
+
+  let frameIndex = 0;
+
+  setInterval(() => {
+    const bg = document.querySelector('.background');
+    frameIndex = (frameIndex + 1) % frames.length;
+    bg.src = frames[frameIndex];
+  }, 5000);
+
+  // Wait 4 seconds (adjust to match your GIF length)
+  setTimeout(() => {
+    window.location.href = "next.html";
+  }, 15000);
+
+  document.addEventListener("click", () => {
+  const audio = document.getElementById("player");
+  audio.play();
+  }, { once: true });
+
+
+
+  </script>
+</body>
+</html>
