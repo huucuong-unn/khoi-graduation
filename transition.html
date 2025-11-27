@@ -70,12 +70,6 @@
   setInterval(() => {
     const bg = document.querySelector('.background');
     frameIndex = (frameIndex + 1) % frames.length;
-    if (frameIndex === 3) {
-      bg.style.height = "700px"; // use style or a numeric bg.height = 700
-    } else {
-      bg.style.height = "500px"; // reset height for other frames 
-    }
-    
     bg.src = frames[frameIndex];
   }, 5000);
 
@@ -93,6 +87,10 @@
     window.location.href = "next.html";
   });
 
+  document.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById('player');
+    if (audio) audio.volume = 0.3; // 0.0 - 1.0 (50%)
+  });
   </script>
 </body>
 </html>

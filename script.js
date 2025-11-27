@@ -66,3 +66,8 @@ document.addEventListener("click", () => {
   audio.play();
 }, { once: true });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById('player');
+    if (audio) audio.volume = 0.3; // 0.0 - 1.0 (50%)
+});
+
